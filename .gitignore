@@ -1,0 +1,7 @@
+### IntelliJ IDEA ###
+!.idea/codeStyles/Project.xml
+!.idea/codeStyles/codeStyleConfig.xml
+.idea/
+*.iws
+*.iml
+*.ipr
