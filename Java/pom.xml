@@ -83,7 +83,9 @@
         <module>seminar3-record</module>
         <module>seminar3-sealed</module>
         <module>seminar4</module>
-        <module>seminar5</module>
+        <module>seminar5-api</module>
+        <module>seminar5-arrays</module>
+        <module>seminar5-library</module>
         <module>seminar6</module>
         <module>seminar7</module>
         <module>seminar8</module>

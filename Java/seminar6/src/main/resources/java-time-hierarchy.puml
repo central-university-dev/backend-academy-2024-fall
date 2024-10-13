@@ -1,0 +1,67 @@
+@startuml
+!theme vibrant
+
+skinparam {
+    linetype ortho
+    padding 10
+}
+
+package java.time {
+
+    interface TemporalAccessor
+    interface Temporal
+    interface TemporalAmount
+    interface TemporalUnit
+
+    abstract class ZoneId
+    abstract class Clock
+
+    enum ChronoUnit
+
+    class Duration
+    class Period
+    class Instant
+    class LocalDate
+    class LocalDateTime
+    class LocalTime
+    class OffsetDateTime
+    class OffsetTime
+    class Period
+    class ZonedDateTime
+    class ZoneOffset
+    class ZoneRegion
+
+    TemporalAccessor <|.. Temporal
+    TemporalAccessor <|.. ZoneOffset
+
+    Temporal <|.. Instant
+    Temporal <|.. OffsetTime
+    Temporal <|.. ZonedDateTime
+    Temporal <|.. LocalDateTime
+    Temporal <|.. OffsetDateTime
+    Temporal <|.. LocalDate
+    Temporal <|.. LocalTime
+
+    TemporalAmount <|.. Duration
+    TemporalAmount <|.. Period
+
+    TemporalUnit <|.. ChronoUnit
+
+    ZoneId <|-- ZoneOffset
+    ZoneId <|-- ZoneRegion
+
+    LocalDate *-- LocalDateTime
+    LocalDate *-- LocalTime
+
+    OffsetDateTime *-- LocalDateTime
+    OffsetDateTime *-- ZoneOffset
+
+    OffsetTime *-- LocalTime
+    OffsetTime *-- ZoneOffset
+
+    ZonedDateTime *-- LocalDateTime
+    ZonedDateTime *-- ZoneOffset
+    ZonedDateTime *-- ZoneId
+}
+
+@enduml
