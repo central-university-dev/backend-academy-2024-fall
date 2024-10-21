@@ -15,3 +15,12 @@ lazy val `seminar-6` = project
       "org.scalacheck" %% "scalacheck" % "1.18.1" % Test,
     )
   )
+lazy val `seminar-7` = project
+  .settings(
+    idePackagePrefix := Some("ru.tbank"),
+    scalaVersion := Versions.scala3,
+    libraryDependencies ++= Seq(
+      "org.typelevel" %% "cats-core" % "2.12.0",
+      "org.typelevel" %% "cats-effect" % "3.5.4"
+    )
+  )
