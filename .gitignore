@@ -5,3 +5,9 @@
 *.iws
 *.iml
 *.ipr
+# VSCode
+.metals/
+.bloop/
+.vscode/
+settings.json
+sbt.json
