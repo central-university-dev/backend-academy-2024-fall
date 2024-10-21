@@ -10,6 +10,16 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 ij_continuation_indent_size = 4
 
+[seminar6/**/resources/*.txt]
+charset = unset
+tab_width = unset
+indent_size = unset
+indent_style = unset
+max_line_length = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+ij_continuation_indent_size = unset
+
 [{*.kt,*.kts}]
 ktlint_code_style = ktlint_official
 ktlint_standard = enabled
