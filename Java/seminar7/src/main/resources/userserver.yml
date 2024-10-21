@@ -1,0 +1,124 @@
+openapi: 3.0.1
+info:
+  title: User API
+  description: API для управления пользователями.
+  version: 1.0.0
+paths:
+  /api/v1/users:
+    post:
+      summary: Создать пользователя
+      tags:
+        - Users
+      operationId: createUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Пользователь успешно создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '500':
+          description: Ошибка сервера
+
+  /api/v1/users/{userId}:
+    get:
+      summary: Получить пользователя по ID
+      tags:
+        - Users
+      operationId: getUser
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Пользователь найден
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Пользователь не найден
+        '500':
+          description: Ошибка сервера
+
+    put:
+      summary: Обновить информацию о пользователе
+      tags:
+        - Users
+      operationId: updateUser
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          description: Пользователь обновлен
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '404':
+          description: Пользователь не найден
+        '500':
+          description: Ошибка сервера
+
+    delete:
+      summary: Удалить пользователя по ID
+      tags:
+        - Users
+      operationId: deleteUser
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Пользователь удален
+        '404':
+          description: Пользователь не найден
+        '500':
+          description: Ошибка сервера
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Уникальный идентификатор пользователя
+          example: "123e4567-e89b-12d3-a456-426614174000"
+        name:
+          type: string
+          description: Имя пользователя
+          example: "Иван Иванов"
+        email:
+          type: string
+          description: Email пользователя
+          example: "ivan.ivanov@example.com"
+        blocked:
+          type: boolean
+          description: Статус блокировки пользователя
+          example: false
+      required:
+        - name
+        - email
