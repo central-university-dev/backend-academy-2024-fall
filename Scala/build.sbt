@@ -1,8 +1,23 @@
-lazy val `seminar-1` = project.settings(idePackagePrefix := Some("ru.tbank"), scalaVersion := Versions.scala3)
-lazy val `seminar-2` = project.settings(idePackagePrefix := Some("ru.tbank"), scalaVersion := Versions.scala3)
-lazy val `seminar-3` = project.settings(idePackagePrefix := Some("ru.tbank"), scalaVersion := Versions.scala3)
-lazy val `seminar-4` = project.settings(idePackagePrefix := Some("ru.tbank"), scalaVersion := Versions.scala3)
-lazy val `seminar-5` = project.settings(idePackagePrefix := Some("ru.tbank"), scalaVersion := Versions.scala3)
+lazy val `seminar-1` = project.settings(
+  idePackagePrefix := Some("ru.tbank"),
+  scalaVersion := Versions.scala3
+)
+lazy val `seminar-2` = project.settings(
+  idePackagePrefix := Some("ru.tbank"),
+  scalaVersion := Versions.scala3
+)
+lazy val `seminar-3` = project.settings(
+  idePackagePrefix := Some("ru.tbank"),
+  scalaVersion := Versions.scala3
+)
+lazy val `seminar-4` = project.settings(
+  idePackagePrefix := Some("ru.tbank"),
+  scalaVersion := Versions.scala3
+)
+lazy val `seminar-5` = project.settings(
+  idePackagePrefix := Some("ru.tbank"),
+  scalaVersion := Versions.scala3
+)
 lazy val `seminar-6` = project
   .settings(
     idePackagePrefix := Some("ru.tbank"),
@@ -12,7 +27,7 @@ lazy val `seminar-6` = project
       "org.typelevel" %% "cats-laws" % "2.12.0" % Test,
       "org.scalatest" %% "scalatest" % "3.2.9" % Test,
       "org.typelevel" %% "discipline-scalatest" % "2.3.0" % Test,
-      "org.scalacheck" %% "scalacheck" % "1.18.1" % Test,
+      "org.scalacheck" %% "scalacheck" % "1.18.1" % Test
     )
   )
 lazy val `seminar-7` = project
@@ -51,6 +66,7 @@ lazy val `seminar-8` = project.settings(
     // test
     "com.softwaremill.sttp.tapir" %% "tapir-sttp-stub-server" % "1.10.15" % Test,
     "org.scalatest" %% "scalatest" % "3.2.18" % Test,
-    "org.scalamock" %% "scalamock" % "6.0.0" % Test
+    "org.scalamock" %% "scalamock" % "6.0.0" % Test,
+    "org.typelevel" %% "munit-cats-effect" % "2.0.0" % Test
   )
 )

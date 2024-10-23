@@ -11,6 +11,7 @@ import cats.effect.kernel.Clock
 import tbank.petstore.repository.OrderRepository
 import tbank.petstore.domain.order.Order
 import cats.instances.order
+import cats.Id
 
 trait OrderService[F[_]]:
   def create(createOrder: CreateOrder): F[OrderResponse]
