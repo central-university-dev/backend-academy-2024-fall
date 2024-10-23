@@ -25,7 +25,7 @@ import tbank.petstore.service.PetService
 
 import java.util.UUID
 
-object Main extends IOApp:
+object Main extends IOApp {
   override def run(args: List[String]): IO[ExitCode] =
     for {
       orderCache <- Cache.make[IO, UUID, Order]
@@ -73,4 +73,4 @@ object Main extends IOApp:
       .leftMap(new IllegalArgumentException(_))
       .rethrowT
   }
-end Main
+}
