@@ -1,0 +1,5 @@
+package main
+
+func BadFunction2() {
+	var x = 1
+}
