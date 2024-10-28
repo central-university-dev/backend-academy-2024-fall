@@ -1,4 +1,6 @@
-
+- [mockery](#mockery)
+  - [Простейшие моки](#простейшие-моки)
+  - [codegen](#codegen)
 
 # mockery
 
