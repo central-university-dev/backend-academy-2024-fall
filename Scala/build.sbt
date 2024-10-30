@@ -70,3 +70,12 @@ lazy val `seminar-8` = project.settings(
     "org.typelevel" %% "munit-cats-effect" % "2.0.0" % Test
   )
 )
+
+lazy val `seminar-9` =
+  (project in file("seminar-9"))
+    .settings(
+      libraryDependencies ++= Seq(
+        "org.scalatest" %% "scalatest" % "3.2.18" % Test,
+        "org.scalamock" %% "scalamock" % "6.0.0" % Test
+      )
+    )
