@@ -43,7 +43,6 @@ class OrderServiceSpec extends CatsEffectSuite {
     val orderId = UUID
       .fromString("123e4567-e89b-12d3-a456-426655440000")
     val petId = UUID.randomUUID()
-    // init
     val service: IO[OrderService[IO]] = for {
       given Clock[IO] <- TestClock.make[IO](0.second)
       given UUIDGen[IO] = new UUIDGen[IO] {
@@ -68,10 +67,10 @@ class OrderServiceSpec extends CatsEffectSuite {
           override def applicative: Applicative[F] = Applicative[F]
 
           override def monotonic: F[FiniteDuration] =
-            clock.getAndUpdate(_ + 1.second)
+            clock.get//.getAndUpdate(_ + 1.second)
 
           override def realTime: F[FiniteDuration] =
-            clock.getAndUpdate(_ + 1.second)
+            clock.get//.getAndUpdate(_ + 1.second)
         }
       )
 }

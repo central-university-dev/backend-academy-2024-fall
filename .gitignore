@@ -11,3 +11,5 @@
 .vscode/
 settings.json
 sbt.json
+.history/
+

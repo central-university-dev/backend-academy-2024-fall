@@ -30,6 +30,9 @@ object OrderService:
     override def create(createOrder: CreateOrder): F[OrderResponse] =
       for {
         id <- UUIDGen[F].randomUUID
+        _ <- Clock[F].realTimeInstant
+        _ <- Clock[F].realTimeInstant
+        _ <- Clock[F].realTimeInstant
         now <- Clock[F].realTimeInstant
         order = Order.fromCreateOrder(id, now, createOrder)
         _ <- orderRepository.create(order)
