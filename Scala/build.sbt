@@ -79,3 +79,26 @@ lazy val `seminar-9` =
         "org.scalamock" %% "scalamock" % "6.0.0" % Test
       )
     )
+
+lazy val `seminar-10` = project
+  .settings(
+      idePackagePrefix := Some("ru.tbank"),
+      scalaVersion := Versions.scala3,
+      libraryDependencies ++= Seq(
+          // cats
+          "org.typelevel" %% "cats-core" % "2.12.0",
+          "org.typelevel" %% "cats-effect" % "3.5.4",
+
+          // java email
+          "javax.mail" % "mail" % "1.4.7",
+
+          // scala email
+          "com.github.eikek" %% "emil-common" % "0.15.0",
+          "com.github.eikek" %% "emil-javamail" % "0.15.0",
+
+          // test
+          "org.scalatest" %% "scalatest" % "3.2.18" % Test,
+          "org.scalamock" %% "scalamock" % "6.0.0" % Test,
+          "org.typelevel" %% "cats-effect-testing-scalatest" % "1.5.0" % Test,
+      )
+  )
