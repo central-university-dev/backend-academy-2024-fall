@@ -102,3 +102,11 @@ lazy val `seminar-10` = project
           "org.typelevel" %% "cats-effect-testing-scalatest" % "1.5.0" % Test,
       )
   )
+lazy val `seminar-11` = project.settings(
+  libraryDependencies ++= Seq(
+    // cats
+    "org.typelevel" %% "cats-core" % "2.12.0",
+    "org.typelevel" %% "cats-effect" % "3.5.4"
+  )
+)
+
