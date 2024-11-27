@@ -20,6 +20,7 @@
         <Logger name="jdk.event.security" level="INFO"/>
         <Logger name="sun.rmi" level="WARN"/>
         <Logger name="sun.rmi.transport" level="WARN"/>
+        <Logger name="reactor" level="INFO"/>
 
         <Root level="TRACE">
             <AppenderRef ref="STDOUT_PLAIN"/>
