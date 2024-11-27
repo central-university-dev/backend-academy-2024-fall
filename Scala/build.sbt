@@ -109,4 +109,11 @@ lazy val `seminar-11` = project.settings(
     "org.typelevel" %% "cats-effect" % "3.5.4"
   )
 )
+lazy val `seminar-12` = project.settings(
+  scalaVersion := Versions.scala3,
+  libraryDependencies ++= Seq(
+    "org.typelevel" %% "cats-core"   % "2.12.0",
+    "org.typelevel" %% "cats-effect" % "3.5.4"
+  )
+)
 
